@@ -33,7 +33,6 @@ export const portfolioPhotos: PortfolioPhoto[] = [
     category: 'casamentos',
     alt: 'Entrada da noiva em cerimônia ao ar livre, entre os convidados, no fim da tarde.',
     orientation: 'horizontal',
-    featured: true,
   },
   {
     id: 'casamento-arco-floral',
@@ -42,7 +41,14 @@ export const portfolioPhotos: PortfolioPhoto[] = [
     category: 'casamentos',
     alt: 'Noivos sentados sob um arco de flores no jardim, olhando um para o outro.',
     orientation: 'vertical',
-    featured: true,
+  },
+  {
+    id: 'casamento-abraco-altar',
+    slug: 'casamento-abraco-altar',
+    caption: 'O abraço',
+    category: 'casamentos',
+    alt: 'Noivos abraçados diante do altar, de olhos fechados, durante a cerimônia na igreja.',
+    orientation: 'horizontal',
   },
   {
     id: 'casamento-altar-igreja',
@@ -61,6 +67,14 @@ export const portfolioPhotos: PortfolioPhoto[] = [
     orientation: 'vertical',
   },
   {
+    id: 'casamento-por-do-sol',
+    slug: 'casamento-por-do-sol',
+    caption: 'Pôr do sol',
+    category: 'casamentos',
+    alt: 'Noivos abraçados com o buquê, recortados pelo céu alaranjado do fim do dia.',
+    orientation: 'horizontal',
+  },
+  {
     id: 'casamento-cerimonia-ar-livre',
     slug: 'casamento-cerimonia-ar-livre',
     caption: 'Cerimônia ao ar livre',
@@ -75,6 +89,14 @@ export const portfolioPhotos: PortfolioPhoto[] = [
     category: 'casamentos',
     alt: 'Noivos sorrindo lado a lado dentro da igreja, com buquê de flores claras.',
     orientation: 'vertical',
+  },
+  {
+    id: 'casamento-ceu-aberto',
+    slug: 'casamento-ceu-aberto',
+    caption: 'Céu aberto',
+    category: 'casamentos',
+    alt: 'Cerimônia ao ar livre sob céu azul, com os noivos sentados diante do celebrante.',
+    orientation: 'horizontal',
   },
   {
     id: 'ensaio-casal-alameda',

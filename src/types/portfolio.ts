@@ -16,10 +16,9 @@ export interface PortfolioPhoto {
   category: PortfolioCategory;
   /** Texto alternativo descritivo, obrigatório para acessibilidade. */
   alt: string;
-  /** Define o peso da foto dentro da grade. Calculado a partir do arquivo real. */
+  /** Orientação da fotografia, usada para ler e revisar o acervo. A grade em si
+   *  se apoia nas dimensões reais do arquivo, vindas do manifesto. */
   orientation: PhotoOrientation;
-  /** Destaca a foto em uma célula maior da grade. */
-  featured?: boolean;
 }
 
 export interface PortfolioFilter {

@@ -15,6 +15,14 @@ export interface ImageAsset {
 }
 
 export const imageManifest = {
+  'casamento-abraco-altar': {
+    folder: 'portfolio',
+    width: 1440,
+    height: 967,
+    widths: [1440, 960, 640, 400],
+    placeholder:
+      'data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQBACdASoUAA0APt1cpkyopSOiMAgBEBuJYwAATGDjO1HGh7Pi2EbcAAD+1FzvakuZgXYiEch+qvJF2mIPlMsNOYWbLnodMMFPl+i+MhDx1hsywjJn3JHH3/OZpdi4mpPY2Y8iAAA=',
+  },
   'casamento-altar-igreja': {
     folder: 'portfolio',
     width: 1440,
@@ -39,6 +47,14 @@ export const imageManifest = {
     placeholder:
       'data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQBACdASoUAA0APt1apkyopSOiMAgBEBuJZQCo9CH//MqHw9DnPKhxwAD3TwH8gjtT53virvQ4uV4hoKSjC85z9eFdCF0vqELekvCm/3dF3aWWY/0FKtlnYAGkZbzyrXJBhr11aGGXPXI0vHAAAA==',
   },
+  'casamento-ceu-aberto': {
+    folder: 'portfolio',
+    width: 1440,
+    height: 960,
+    widths: [1440, 960, 640, 400],
+    placeholder:
+      'data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwBACdASoUAA0APt1cpkyopSOiMAgBEBuJZgCdABu11G0w5T+hln7oqwAA/u8/xvJ063YIl0edvLkdWUU24tb4Nez+IjPFciZYGUYlQMO6C7x7sskWVWHxWJoiF4K8ZZQ08yAA',
+  },
   'casamento-entrada-cerimonia': {
     folder: 'portfolio',
     width: 1440,
@@ -62,6 +78,14 @@ export const imageManifest = {
     widths: [1440, 960, 640, 400],
     placeholder:
       'data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAACwBACdASoUABkAPt1mq1EopSOiqAgBEBuJQBOmWhgYdAxmhaklETNQX7oIu/ZwAPzGAx9DZcAD+96G+m7kimbjES/JAk7xP0YgPK2yMtgWpNDMyY0Og+3h38JhFhT+cc/7iFRVSHv1F00VG5acWzFE+wGhbUcZdhFx15UvipA5rEWaP5UYzCqMRdXiB62ODGyMwuwHdUAAAA==',
+  },
+  'casamento-por-do-sol': {
+    folder: 'portfolio',
+    width: 1440,
+    height: 960,
+    widths: [1440, 960, 640, 400],
+    placeholder:
+      'data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABwAwCdASoUAA0APt1cpkyopSOiMAgBEBuJQBOgAwgYZ24+6wAA/u9LfsUdrYIoZEeDiGCaZv+J2/RnSvr6saHtHC4NRg7AREYXBMJQJxkW2IxtIkw1BYc1pCwYAA==',
   },
   'ensaio-casal-alameda': {
     folder: 'portfolio',
