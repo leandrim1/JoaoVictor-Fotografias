@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --header-height: 72px;
+    color-scheme: light;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --header-height: 88px;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Compensa o cabeçalho fixo na navegação por âncoras. */
+    scroll-padding-top: var(--header-height);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-canvas text-ink font-sans antialiased;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+    /* Evita rolagem horizontal causada por faixas de largura total. */
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #171715;
+    color: #faf9f6;
+  }
+
+  :focus-visible {
+    outline: 2px solid #a58b64;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  /* Legenda em caixa alta usada para identificar seções. */
+  .eyebrow {
+    @apply font-sans text-[10px] font-medium uppercase tracking-label text-muted md:text-[11px];
+  }
+
+  .section-shell {
+    @apply mx-auto w-full max-w-shell px-6 md:px-10 lg:px-16;
+  }
+
+  .display {
+    @apply font-serif font-light leading-[1.04] tracking-[-0.015em];
+  }
+
+  .link-underline {
+    @apply relative inline-block;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-[-3px] left-0 h-px w-full origin-right scale-x-0 bg-current transition-transform duration-300 ease-editorial;
+  }
+
+  .link-underline:hover::after,
+  .link-underline:focus-visible::after {
+    @apply origin-left scale-x-100;
+  }
+}
+
+@layer utilities {
+  /* Estado inicial dos elementos animados por IntersectionObserver. */
+  .reveal-idle {
+    opacity: 0;
+    will-change: opacity, transform;
+  }
+
+  .marquee-track {
+    --marquee-duration: 42s;
+    animation: marquee var(--marquee-duration) linear infinite;
+  }
+
+  @media (min-width: 768px) {
+    .marquee-track {
+      --marquee-duration: 78s;
+    }
+  }
+
+  .marquee-paused {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  /* Altura do hero com reserva para a barra de endereço do celular. */
+  .h-hero {
+    height: 100vh;
+    height: 100svh;
+    min-height: 560px;
+  }
+
+  @media (min-width: 768px) {
+    .h-hero {
+      height: 92vh;
+      max-height: 1000px;
+    }
+  }
+
+  .animate-nudge {
+    animation: nudge 2.4s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+  }
+
+  @keyframes nudge {
+    0%,
+    100% {
+      transform: translateY(0);
+      opacity: 0.75;
+    }
+    50% {
+      transform: translateY(6px);
+      opacity: 1;
+    }
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Respeita quem pediu menos movimento no sistema operacional. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .reveal-idle {
+    opacity: 1 !important;
+  }
+
+  .marquee-track {
+    animation: none !important;
+  }
+}
